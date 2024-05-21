@@ -1,0 +1,18 @@
+    <div class="card h-100">
+      <img [src]="'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7d4a1f54b4de42b49ebeada800c6145f_9366/Own_the_Run_Tee_Black_H58591_01_laydown.jpg'" alt="{{ product.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">Brand: {{ product.brand }}</p>
+        <p class="card-text">Gender: {{ product.gender }}</p>
+        <p class="card-text">Category: {{ product.category }}</p>
+        <p class="card-text">Sizes: {{ product.size.join(', ') }}</p>
+        <p class="card-text">Colors: {{ product.color.join(', ') }}</p>
+        <p class="card-text">Price: ${{ product.price }}</p>
+        <p class="card-text">Discount Price: ${{ product.discountPrice }}</p>
+        <p class="card-text" *ngIf="product.is_in_inventory">In Stock: {{ product.items_left }}</p>
+        <p class="card-text" *ngIf="!product.is_in_inventory">Out of Stock</p>
+      </div>
+    </div>
+
+  
