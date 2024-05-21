@@ -15,4 +15,4 @@ phases:
   post_build:
     commands:
       - echo "Updating files in the S3 bucket..."
-      - aws s3 sync dist/properties/browser s3://ecommerce-app-dz --delete
+      - aws s3 sync dist/angular-ekart s3://ecommerce-app-dz --delete
